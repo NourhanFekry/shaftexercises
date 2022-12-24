@@ -1,6 +1,5 @@
 package pages;
 
-import apitesting.RegisterUser;
 import com.shaft.driver.SHAFT;
 import org.openqa.selenium.By;
 
@@ -11,7 +10,7 @@ public class LoginPage
     By loginEmailFiled = By.xpath("//*[@data-qa='login-email']");
     By loginPasswordFiled = By.xpath("//*[@data-qa='login-password']");
     By loginButton = By.xpath("//*[@data-qa='login-button']");
-    By incorrectLoginData = By.xpath("(//P)[1]");
+    By loggedInAsUserName = By.xpath(" //i[contains(@class,'fa-user')]//parent::a");
 
     public LoginPage(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
@@ -26,8 +25,8 @@ public class LoginPage
     {
         driver.element().click(loginButton);
     }
-    public String checkIncorrectLoginData()
+    public String checkLoginSuccessfully()
     {
-        return driver.element().getText(incorrectLoginData);
+        return driver.element().getText(loggedInAsUserName);
     }
 }

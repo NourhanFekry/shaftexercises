@@ -1,4 +1,4 @@
-package apitesting;
+package api_testing;
 
 
 import com.shaft.api.RestActions;
@@ -14,18 +14,15 @@ public class RegisterUser
 {
 SHAFT.API api;
 String url = System.getProperty("automationExerciseBaseUrl");
-
 private String email;
-
 private String password;
-
+private String name;
 
     @BeforeClass
     public void setup()
-{
+    {
     api = new SHAFT.API(url);
-}
-
+    }
    //////////API 11: POST To Create/Register User Account\\\\\\\\\\\\
     @Test
     public void createRegisterUser()
@@ -33,7 +30,7 @@ private String password;
         List <List<Object>> registerData= Arrays.asList
         (
                 Arrays.asList("name","Nourhan"),
-                Arrays.asList("email","nourhaanTest@gmail.com"),
+                Arrays.asList("email","nawara@Test.com"),
                 Arrays.asList("password","246810"),
                 Arrays.asList("title","Ms"),
                 Arrays.asList("brith_date","28"),
@@ -49,22 +46,33 @@ private String password;
                 Arrays.asList("state","Cairo"),
                 Arrays.asList("city","cairo"),
                 Arrays.asList("mobile_number","01234567890")
-                );
+        );
         api.post("/createAccount")
                 .setParameters(registerData, RestActions.ParametersType.FORM)
                 .setContentType(ContentType.URLENC)
                 .perform();
 
+        ///////////// try to get email and password from api body\\\\\\\\\\\\\\\
+       /*
         List<Object> emailValue = registerData.get(1);
         email  = emailValue.get(1).toString();
         List<Object> passwordValue = registerData.get(2);
         password  = passwordValue.get(1).toString();
+        */
     }
-    public String getEmail() {
+    public String getEmail()
+    {
+        email = "nawaraTest@gmail.com";
         return email;
     }
-
-    public String getPassword() {
+    public String getPassword()
+    {
+        password = "246810";
         return  password;
+    }
+    public String getName()
+    {
+        name = "Nourhan";
+        return name;
     }
 }

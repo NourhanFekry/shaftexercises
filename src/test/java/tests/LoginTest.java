@@ -1,6 +1,6 @@
 package tests;
 
-import apitesting.RegisterUser;
+import api_testing.RegisterUser;
 import com.shaft.driver.SHAFT;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -12,7 +12,6 @@ public class LoginTest
     LoginPage loginPage;
     RegisterUser registerUser;
 
-
     @BeforeClass
     public void setUp()
     {
@@ -23,10 +22,15 @@ public class LoginTest
     @Test
     public void loginWithCorrectData()
     {
+        loginPage = new LoginPage(driver);
         registerUser=new RegisterUser();
-        System.out.println("nnnnnnn  "+registerUser.getEmail());
-        System.out.println("ppppppp  "+registerUser.getPassword());
+        System.out.println("This Line For Test " +registerUser.getEmail());
         loginPage.enterDataInLoginEmailFiled(registerUser.getEmail(),registerUser.getPassword());
         loginPage.clickLoginButton();
+        SHAFT.Validations
+                .assertThat()
+                .object(loginPage.checkLoginSuccessfully()
+                .contains("Logged in as "+registerUser.getName()));
+        System.out.println("pass");
     }
 }
