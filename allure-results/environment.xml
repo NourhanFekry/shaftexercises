@@ -22,7 +22,7 @@
   </parameter>
   <parameter>
     <key>sun.java.command</key>
-    <value>com.intellij.rt.testng.RemoteTestNGStarter -usedefaultlisteners false -listener com.shaft.tools.listeners.SuiteListener;com.shaft.tools.listeners.AlterSuiteListener;com.shaft.tools.listeners.InvokedMethodListener -socket58734 @w@C:\Users\FekryN2\AppData\Local\Temp\idea_working_dirs_testng.tmp -temp C:\Users\FekryN2\AppData\Local\Temp\idea_testng.tmp</value>
+    <value>com.intellij.rt.testng.RemoteTestNGStarter -usedefaultlisteners false -listener com.shaft.tools.listeners.SuiteListener;com.shaft.tools.listeners.AlterSuiteListener;com.shaft.tools.listeners.InvokedMethodListener -socket58245 @w@C:\Users\FekryN2\AppData\Local\Temp\idea_working_dirs_testng.tmp -temp C:\Users\FekryN2\AppData\Local\Temp\idea_testng.tmp</value>
   </parameter>
   <parameter>
     <key>jdk.debug</key>
@@ -114,15 +114,11 @@
   </parameter>
   <parameter>
     <key>java.library.path</key>
-    <value>C:\Users\FekryN2\.jdks\corretto-17.0.5\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Users\FekryN2\AppData\Local\Microsoft\WindowsApps;C:\Users\FekryN2\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\FekryN2\AppData\Local\Programs\Git\cmd;.</value>
+    <value>C:\Users\FekryN2\.jdks\corretto-17.0.5\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Users\FekryN2\AppData\Local\Microsoft\WindowsApps;C:\Users\FekryN2\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\FekryN2\AppData\Local\Programs\Git\cmd;C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin\;C:\Users\FekryN2\AppData\Local\Android\Sdk\bin;C:\Users\FekryN2\AppData\Local\Android\Sdk\tools;C:\Users\FekryN2\AppData\Local\Android\Sdk\platform-tools;;.</value>
   </parameter>
   <parameter>
     <key>java.vendor</key>
     <value>Amazon.com Inc.</value>
-  </parameter>
-  <parameter>
-    <key>automationExerciseBaseUrl</key>
-    <value>https://automationexercise.com/api</value>
   </parameter>
   <parameter>
     <key>screenshotParams_scalingFactor</key>
@@ -287,6 +283,10 @@
   <parameter>
     <key>serverPort</key>
     <value>7878</value>
+  </parameter>
+  <parameter>
+    <key>//automationExerciseBaseUrl</key>
+    <value>https://automationexercise.com/api</value>
   </parameter>
   <parameter>
     <key>browserNavigationTimeout</key>
